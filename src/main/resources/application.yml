@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: exam # Set your application name here
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ems
+    username: postgres
+    password: '81942686'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
