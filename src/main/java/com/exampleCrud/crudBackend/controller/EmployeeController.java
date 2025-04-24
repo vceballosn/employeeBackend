@@ -9,6 +9,8 @@ import com.exampleCrud.crudBackend.dto.EmployeeDto;
 
 import lombok.AllArgsConstructor;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -41,5 +43,10 @@ public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") Long idEm
     return ResponseEntity.ok(idEmployeeDto);
 }
 
+@GetMapping
+public  ResponseEntity<List<EmployeeDto>>  getAllEmployees(){
+	List<EmployeeDto>  employees = employeeService.getAllEmployee();
+	 return ResponseEntity.ok(employees);	
+}
 
 }

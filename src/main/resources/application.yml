@@ -7,7 +7,7 @@ spring:
     password: '81942686'
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       show-sql: true
    
 
