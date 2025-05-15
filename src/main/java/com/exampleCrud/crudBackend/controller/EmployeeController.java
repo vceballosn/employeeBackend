@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin("*")
 @AllArgsConstructor // Inyección de dependencias a través del constructor (recomendado)
 @RestController
 @RequestMapping("api/v1/employees") // Path base para todos los endpoints de este controlador
