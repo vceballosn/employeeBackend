@@ -45,11 +45,12 @@ public class EmployeeServiceImp implements EmployeeService {
 	}
 
 	@Override
-	public EmployeeDto updateEmployee(Long employeeId, EmployeeDto employeeUpdate) {
+	public EmployeeDto updateEmployee(EmployeeDto employeeUpdate) {
 		// TODO Auto-generated method stub
 		
-		Employee employee = employeeRepository.findById(employeeId)  .orElseThrow(() -> new ResourceNotFoundException("Employee not found with id: " + employeeId));
-		
+		//Employee employee = employeeRepository.findById(employeeId)  .orElseThrow(() -> new ResourceNotFoundException("Employee not found with id: " + employeeId));
+		Employee employee = new Employee();
+		employee.setId(employeeUpdate.getId());
 		employee.setFirstName(employeeUpdate.getFirstName());
 		employee.setLastName(employeeUpdate.getLastName());
 		employee.setEmail(employeeUpdate.getEmail());

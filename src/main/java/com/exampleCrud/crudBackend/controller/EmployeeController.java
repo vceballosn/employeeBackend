@@ -37,9 +37,9 @@ public class EmployeeController {
         return ResponseEntity.ok(employees);
     }
 
-    @PutMapping("/{id}") // Path variable dentro de la anotación
-    public ResponseEntity<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employeeDto, @PathVariable Long id) { // Usa nombres de variables más cortos y descriptivos
-        EmployeeDto updatedEmployeeDto = employeeService.updateEmployee(id, employeeDto);
+    @PutMapping() // Path variable dentro de la anotación
+    public ResponseEntity<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employeeDto) { // Usa nombres de variables más cortos y descriptivos
+        EmployeeDto updatedEmployeeDto = employeeService.updateEmployee(employeeDto);
         return ResponseEntity.ok(updatedEmployeeDto);
     }
 
