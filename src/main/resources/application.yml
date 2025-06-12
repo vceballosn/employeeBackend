@@ -1,14 +1,22 @@
 spring:
   application:
-    name: exam # Set your application name here
+    name: Postgresql CRUD # Set your application name here
   datasource:
     url: jdbc:postgresql://localhost:5432/ems
     username: postgres
-    password: '81942686'
+    password: '81942686' # Enclose password in quotes if it contains special characters
   jpa:
     hibernate:
       ddl-auto: update
       show-sql: true
+server:
+  port: 8090 # Proper indentation for 'port' under 'server'
+eureka:
+  client: # Proper indentation for 'client' under 'eureka'
+    register-with-eureka: true # Use colon and space for boolean values
+    fetch-registry: true       # Use colon and space for boolean values
+    serviceUrl: # Proper indentation for 'serviceUrl'
+      defaultZone: http://localhost:8761/eureka/ # Use colon and space for string values
    
 
 

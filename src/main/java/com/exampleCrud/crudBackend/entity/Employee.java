@@ -1,5 +1,7 @@
 package com.exampleCrud.crudBackend.entity;
 
+import java.util.UUID;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,9 +21,13 @@ import lombok.Setter;
 @Entity
 @Table(name="employees")
 public class Employee {
-	@Id
+	@Id // 'id' is the primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	// 'idUi' is another generated unique identifier, but not the primary key
+	//@GeneratedValue(strategy = GenerationType.UUID)
+//	private UUID idUi;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column (name = "last_name")
